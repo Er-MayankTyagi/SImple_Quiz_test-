@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script>
+            function checkAnswer(){
+                    let pos=0;
+                    
+                    let correct=0;
+                    let ch2=["B","B","C","B","A"];
+                    let ch1;
+                    let choice = document.getElementsByClassName("ch");
+                    for(let i=0;i<choice.length;i++)
+                    {
+                        if(choice[i].checked)
+                        {
+                            ch1 = choice[i].value;
+                            if(ch1 == ch2[pos])
+                            {
+                                correct++;
+                            }
+                            pos++;
+                        }
+//                        else{
+//                            alert("Please select any option");
+//                        }
+                    }
+                if(correct == 5)
+                    {
+                        alert("Congratulations!!\n"+correct+" out of 5 answer correct");
+                    }
+                else if(correct >=3)
+                {
+                     alert("Good!!\n"+correct+" out of 5 answer correct");
+                }
+                else{
+                     alert("Better Luck Next Time!!\nOnly "+correct+" out of 5 answer correct");
+                }
+            }
+            
+            function checkAnswer2(){
+                    let pos=0;
+                    
+                    let correct=0;
+                    let ch2=["B","C","B","A","B"];
+                    let ch1;
+                    let choice = document.getElementsByClassName("ch2");
+                    for(let i=0;i<choice.length;i++)
+                    {
+                        if(choice[i].checked)
+                        {
+                            ch1 = choice[i].value;
+                            if(ch1 == ch2[pos])
+                            {
+                                correct++;
+                            }
+                            pos++;
+                        }
+//                        else{
+//                            alert("Please select any option");
+//                        }
+                    }
+                if(correct == 5)
+                    {
+                        alert("Congratulations!!\n"+correct+" out of 5 answer correct");
+                    }
+                else if(correct >=3)
+                {
+                     alert("Good!!\n"+correct+" out of 5 answer correct");
+                }
+                else{
+                     alert("Better Luck Next Time!!\nOnly "+correct+" out of 5 answer correct");
+                }
+            }
+            
+            function checkAnswer3(){
+                    let pos=0;
+                    
+                    let correct=0;
+                    let ch2=["C","D","C","B","C"];
+                    let ch1;
+                    let choice = document.getElementsByClassName("ch3");
+                    for(let i=0;i<choice.length;i++)
+                    {
+                        if(choice[i].checked)
+                        {
+                            ch1 = choice[i].value;
+                            if(ch1 == ch2[pos])
+                            {
+                                correct++;
+                            }
+                            pos++;
+                        }
+//                        else{
+//                            alert("Please select any option");
+//                        }
+                    }
+                if(correct == 5)
+                    {
+                        alert("Congratulations!!\n"+correct+" out of 5 answer correct");
+                    }
+                else if(correct >=3)
+                {
+                     alert("Good!!\n"+correct+" out of 5 answer correct");
+                }
+                else{
+                     alert("Better Luck Next Time!!\nOnly "+correct+" out of 5 answer correct");
+                }
+            }
+                
+    </script>
+    <style>
+        #b1{
+            background-color: gray;
+            color: white;
+            border: 1px solid gray;
+            border-radius: 3px;
+        }
+        #b2{
+            font-size: 20px; 
+            background-color: green;
+            color: white;
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+        h1{
+            font-family: 'Sansita Swashed', cursive;
+        }
+        h2{
+            font-family: cursive;
+            text-align: center;
+        }
+        h3{
+            font-weight: 600;
+            font-family: cursive;
+        }
+        p{
+            font-family: cursive;
+        }
+        label{
+            font-weight: 100;
+        }
+        a{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .collapse{
+            color: blue;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container-fliud">
+        <h1 style="text-align: center;">QuizPoint</h1><hr>
+            <div class="container">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a data-toggle="tab" href="#dv1">C</a></li>
+            <li><a data-toggle="tab" href="#dv2">C++</a></li>
+            <li><a data-toggle="tab" href="#dv3">HTML</a></li>
+        </ul>
+        <div class="tab-content">
+        <div id="dv1" class="tab-pane fade in active">
+        <h2>C language Quiz</h2><hr style="border: 1px solid darkgrey">
+        <div class="jumbotron">
+            <span style="font-size: 20px; color: blue">* In this Quiz You can see the answer direct Or You can do the quiz and check your result.</span>
+        <h3>1. Who is the founder of C language?</h3><br>
+        <form id="f1">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="A" class="ch"> A. Ken Thompson</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="B" class="ch"> B. Dennis Ritchie</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="C" class="ch"> C. Both</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="D" class="ch"> D. None of them</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d1">View Answer</button>
+
+        <div id="d1" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B. Dennis Ritchie</p></div><hr>
+        <h3>2. When was C language invented?</h3><br>
+        <form id="f2">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="A" class="ch"> A. 1970</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="B" class="ch"> B. 1972</label> </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="C" class="ch"> C. 1877</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="D" class="ch"> D. None of them</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d2">View Answer</button>
+
+        <div id="d2" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B. 1972</p></div><hr>
+        <h3>3. Which language is case-sensitive?</h3><br>
+        <form id="f3">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="A" class="ch"> A. C</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="B" class="ch"> B. C++</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="C" class="ch"> C. Both</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="D" class="ch"> D. None of them</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d3">View Answer</button>
+
+        <div id="d3" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;C. Both</p></div><hr>
+        <h3>4. How many Keywords in C language?</h3><br>
+        <form id="f4">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="A" class="ch"> A. 30</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="B" class="ch"> B. 32</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="C" class="ch"> C. 38</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="D" class="ch"> D. 48</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d4">View Answer</button>
+
+        <div id="d4" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B. 32</p></div><hr>
+        <h3>5. which header file is related to fopen()?</h3><br>
+        <form id="f5">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="A" class="ch"> A. stdio.h </label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="B" class="ch"> B.  stdlib.h</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="C" class="ch"> C. conio.h</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="D" class="ch"> D. None of them</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d5">View Answer</button>
+
+        <div id="d5" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B. stdio.h</p></div><hr>
+        <input type="submit" id="b2" onclick="checkAnswer();" value="Submit Quiz">
+                </div>
+            </div>
+    <div id="dv2" class="tab-pane fade">
+        <h2>C++ language Quiz</h2><hr style="border: 1px solid darkgrey">
+        <div class="jumbotron">
+            <span style="font-size: 20px; color: blue">* In this Quiz You can see the answer direct Or You can do the quiz and check your result.</span>
+        <h3>1. Choose the Object Oriented Programming language from below.</h3><br>
+        <form id="f6">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="A" class="ch2"> A. C</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="B" class="ch2"> B. C++</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="C" class="ch2"> C. Both</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="D" class="ch2"> D. None of them</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d6">View Answer</button>
+
+        <div id="d6" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B. C++</p></div><hr>
+        <h3>2. By default the members of the structure are</h3><br>
+        <form id="f7">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="A" class="ch2"> A. Private</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="B" class="ch2"> B. Protected</label> </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="C" class="ch2"> C. Public</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="D" class="ch2"> D. None of them</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d7">View Answer</button>
+
+        <div id="d7" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;C. Public</p></div><hr>
+        <h3>3. Which of the following is called address operator?</h3><br>
+        <form id="f8">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="A" class="ch2"> A. *</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="B" class="ch2"> B. & </label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="C" class="ch2"> C. _</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="D" class="ch2"> D. %</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d8">View Answer</button>
+
+        <div id="d8" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B. &</p></div><hr>
+        <h3>4. Who created C++?</h3><br>
+        <form id="f9">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="A" class="ch2"> A. Bjarne Stroustrup</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="B" class="ch2"> B. Dennis Ritchie</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="C" class="ch2"> C. Ken Thompson</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="D" class="ch2"> D. Brian Kernighan</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d9">View Answer</button>
+
+        <div id="d9" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;A. Bjarne Stroustrup</p></div><hr>
+        <h3>5. Which of the following is called insertion/put to operator?</h3><br>
+        <form id="f10">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="A" class="ch2"> A. >> </label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="B" class="ch"> B.  << </label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="C" class="ch"> C. > </label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="D" class="ch2"> D. < </label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d10">View Answer</button>
+
+        <div id="d10" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B.  << </p></div><hr>
+        <input type="submit" id="b2" onclick="checkAnswer2();" value="Submit Quiz">
+                </div>
+            </div>
+    <div id="dv3" class="tab-pane fade">
+        <h2>HTML Quiz</h2><hr style="border: 1px solid darkgrey">
+        <div class="jumbotron">
+            <span style="font-size: 20px; color: blue">* In this Quiz You can see the answer direct Or You can do the quiz and check your result.</span>
+        <h3>1. What does HTML stands for?</h3><br>
+        <form id="f11">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="A" class="ch3"> A. Hypertext Machine language.</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="B" class="ch3"> B. Hypertext and links markup language</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="C" class="ch3"> C. Hypertext Markup Language.</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a1" value="D" class="ch3"> D. Hightext machine language.</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d11">View Answer</button>
+
+        <div id="d11" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;C. Hypertext Markup Language.</p></div><hr>
+            
+        <h3>2. How many heading tags are there in HTML5?</h3><br>
+        <form id="f12">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="A" class="ch3"> A. 2</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="B" class="ch3"> B. 3</label> </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="C" class="ch3"> C. 5</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a2" value="D" class="ch3"> D. 6</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d12">View Answer</button>
+
+        <div id="d12" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;D. 6</p></div><hr>
+        <h3>3. Which of the following attributes is used to add link to any element?</h3><br>
+        <form id="f13">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="A" class="ch3"> A. link</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="B" class="ch3"> B. ref</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="C" class="ch3"> C. href</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a3" value="D" class="ch3"> D. newref</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d13">View Answer</button>
+
+        <div id="d13" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;C. href</p></div><hr>
+        <h3>4. HTML is what type of language ?</h3><br>
+        <form id="f14">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="A" class="ch3"> A. Scripting Language</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="B" class="ch3"> B. Markup Language</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="C" class="ch3"> C. Programming Language</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a4" value="D" class="ch3"> D. Network Protocol</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d14">View Answer</button>
+
+        <div id="d14" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;B. Markup Language</p></div><hr>
+        <h3>5. HTML uses</h3><br>
+        <form id="f15">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="A" class="ch3"> A. User defined tags</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="B" class="ch3"> B. Pre-specified tags</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="C" class="ch3"> C. Fixed tags defined by the language</label></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="a5" value="D" class="ch3"> D. Tags only for linking</label></p>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="b1" data-toggle="collapse" data-target="#d15">View Answer</button>
+
+        <div id="d15" class="collapse"><br><p> &nbsp;&nbsp;&nbsp;&nbsp;C. Fixed tags defined by the language</p></div><hr>
+        <input type="submit" id="b2" onclick="checkAnswer3();" value="Submit Quiz">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>
